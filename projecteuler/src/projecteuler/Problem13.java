@@ -17,11 +17,11 @@ public class Problem13 {
     ArrayList<String> lines = new ArrayList<String>();
     ArrayList<ArrayList<Integer>> numbers = new ArrayList<ArrayList<Integer>>();
     ArrayList<Integer> answer = new ArrayList<Integer>();
-    File file = new File(
-        "C:/Users/BothaJ/Work/default_workspace/projecteuler/src/Problem13Numbers");
     BufferedReader reader = null;
 
     try {
+      ClassLoader classLoader = Problem13.class.getClassLoader();
+      File file = new File(classLoader.getResource("Problem13Numbers").getFile());
       reader = new BufferedReader(new FileReader(file));
       String text = null;
 

@@ -14,21 +14,22 @@ public class Problem11 {
     
     long startTime = System.nanoTime();
     
-    ArrayList<String> lines = new ArrayList<String>();
     ArrayList<Long> products = new ArrayList<Long>();
     int numAdjacent = 4;
     int gridSize = 20;
-    String[][] grid = new String[gridSize][gridSize];
-    File file = new File("C:/Users/BothaJ/Work/default_workspace/projecteuler/src/Problem11Grid");
+    String[][] grid = new String[gridSize][gridSize];    
     BufferedReader reader = null;
-    
+    int counter = 0;
 
     try {
+        ClassLoader classLoader = Problem11.class.getClassLoader();
+        File file = new File(classLoader.getResource("Problem11Grid").getFile());
         reader = new BufferedReader(new FileReader(file));
         String text = null;
 
         while ((text = reader.readLine()) != null) {
-            lines.add(text);
+          grid[counter] = text.split(" ");
+          counter++;
         }
         
     } catch (FileNotFoundException e) {
@@ -43,12 +44,6 @@ public class Problem11 {
         } catch (IOException e) {
         }
     }
-    
-    int counter = 0;    
-    for(String s : lines){
-      grid[counter] = s.split(" ");
-      counter++;
-    } 
     
     //Horizontal products
     for(int i = 0; i < gridSize; i++){

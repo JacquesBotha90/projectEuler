@@ -22,7 +22,7 @@ public class Problem18 {
       reader = new BufferedReader(new FileReader(file));
       String text = null;
       while ((text = reader.readLine()) != null) {
-        triangle.add(text.split(" "));
+        triangle.add(text.split("\\s"));
       }
     } catch (FileNotFoundException e) {
       e.printStackTrace();

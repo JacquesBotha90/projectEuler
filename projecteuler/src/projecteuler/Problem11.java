@@ -28,7 +28,7 @@ public class Problem11 {
         String text = null;
 
         while ((text = reader.readLine()) != null) {
-          grid[counter] = text.split(" ");
+          grid[counter] = text.split("\\s");
           counter++;
         }
         

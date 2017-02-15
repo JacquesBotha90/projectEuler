@@ -34,6 +34,7 @@ public class Problem24 {
     } else{
       if(stayAlive){
         for(int i = 0; i < nums.size(); i++){
+          @SuppressWarnings("unchecked")
           ArrayList<Integer> reduced = (ArrayList<Integer>) nums.clone();
           String next = s+reduced.get(i);
           reduced.remove(i);     

@@ -5,6 +5,7 @@ import java.math.BigInteger;
 public class Problem48 {
 
   public static void main(String[] args) {
+    long startTime = System.nanoTime();
 
     BigInteger result = new BigInteger("0");
 
@@ -18,6 +19,9 @@ public class Problem48 {
         + "+ ... + 1000^1000 is "
         + result.toString().substring(result.toString().length() - 10));
 
+    long endTime = System.nanoTime();
+    System.out.println("Execution time: " + (endTime - startTime) / 1000000
+        + "ms");
   }
 
 }

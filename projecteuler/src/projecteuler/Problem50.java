@@ -25,7 +25,6 @@ public class Problem50 {
     }
 
     int currentPrime = 0;
-    int currentNumConsecutive = 0;
     int numConsecutive = p - 1;
 
     WHILE: while (numConsecutive > 2) {
@@ -36,20 +35,17 @@ public class Problem50 {
         }
         if (isPrime(sum) && sum < upperLimit) {
           currentPrime = sum;
-          currentNumConsecutive = numConsecutive;
           break WHILE;
         }
       }
       numConsecutive--;
     }
 
-    System.out.println("The prime below " + upperLimit
-        + " that can be written as "
+    System.out.println("The prime below " + upperLimit + " that can be written as "
         + "the sum of the most consecutive primes is " + currentPrime);
 
     long endTime = System.nanoTime();
-    System.out.println("Execution time: " + (endTime - startTime) / 1000000
-        + "ms");
+    System.out.println("Execution time: " + (endTime - startTime) / 1000000 + "ms");
   }
 
   public static boolean isPrime(int num) {

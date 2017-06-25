@@ -1,4 +1,4 @@
-package projecteuler;
+package projecteuler_1to50;
 
 import java.io.BufferedReader;
 import java.io.File;

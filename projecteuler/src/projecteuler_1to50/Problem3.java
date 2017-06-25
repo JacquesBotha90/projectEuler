@@ -1,4 +1,4 @@
-package projecteuler;
+package projecteuler_1to50;
 
 import java.util.Collections;
 import java.util.HashSet;

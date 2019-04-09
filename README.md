@@ -7,5 +7,3 @@ My aim is to solve each problem with all required tools contained in a single cl
 I did the first fifty problems in Java. To spice things up I have decided I am going to do the next fifty in Python.
 
 Feel free to give some constructive criticism on how I could improve.
-
-J
